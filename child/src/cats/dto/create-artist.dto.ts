@@ -4,7 +4,7 @@ export class CreateArtistDto {
   @IsString()
   readonly name: string;
 
-  @IsInt()
+  @IsString()
   readonly instrument: string;
 
   @IsString()
