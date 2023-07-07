@@ -22,4 +22,8 @@ export class ArtistsService {
   async findAll(): Promise<Artist[]> {
     return this.artistModel.find().exec();
   }
+
+  async remove(id: string): Promise<any> {
+    return this.artistModel.findByIdAndRemove(id).exec();
+  }
 }

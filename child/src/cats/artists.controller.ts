@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body } from '@nestjs/common';
+import { Controller, Get, Post, Delete, Body, Param } from '@nestjs/common';
 
 import { ArtistsService } from './artists.service';
 import { CreateArtistDto } from './dto/create-artist.dto';
@@ -16,5 +16,10 @@ export class ArtistsController {
   @Get('getAll')
   async findAll(): Promise<Artist[]> {
     return this.artistsService.findAll();
+  }
+
+  @Delete(':id')
+  remove(@Param('id') id: string): Promise<void> {
+    return this.artistsService.remove(id);
   }
 }
