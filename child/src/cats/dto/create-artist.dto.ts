@@ -1,12 +1,12 @@
 import { IsInt, IsString } from 'class-validator';
 
-export class CreateCatDto {
+export class CreateArtistDto {
   @IsString()
   readonly name: string;
 
   @IsInt()
-  readonly age: number;
+  readonly instrument: string;
 
   @IsString()
-  readonly breed: string;
+  readonly genre: string;
 }
