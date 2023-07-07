@@ -29,4 +29,17 @@ export class ArtistsService {
       }),
     );
   }
+
+
+  remove(id: string): any {
+    return this.http
+      .delete(`http://child:3000/artists/${id}`)
+      .pipe(
+        map((response) =>
+          console.log(
+            `Artists Child delete says ${JSON.stringify(response.data)}`,
+          ),
+        ),
+      );
+  }
 }

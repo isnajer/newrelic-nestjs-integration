@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body } from '@nestjs/common';
+import { Controller, Get, Post, Body, Delete, Param } from '@nestjs/common';
 import { ArtistsService } from './artists.service';
 
 @Controller('artists')
@@ -15,5 +15,10 @@ export class ArtistsController {
   @Get('getAll')
   async findAll(): Promise<string> {
     return this.artistsService.getAll();
+  }
+
+  @Delete(':id')
+  remove(@Param('id') id: string): Promise<void> {
+    return this.artistsService.remove(id);
   }
 }
