@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
-import { ArtistsModule } from './cats/cats.module';
+import { ArtistsModule } from './cats/artists.module';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
