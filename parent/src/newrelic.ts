@@ -9,7 +9,7 @@ exports.config = {
   /**
    * Array of application names.
    */
-  app_name: ['MotoMami'],
+  app_name: 'MotoMami',
   /**
    * Your New Relic license key.
    */
